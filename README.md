@@ -1,4 +1,4 @@
-# Shopping Project
+# E-Commerce Demo Website
 
 A React + Vite + Tailwind CSS shopping application.
 
