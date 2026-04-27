@@ -2,8 +2,11 @@ import "./index.css";
 import { useMemo, useState } from "react";
 
 
-
+// TAX_RATE is 10%
 const TAX_RATE = 0.1;
+
+
+// The products items
 const PRODUCTS = [
   
   { id: 1, name: "Headphones", price: 150, discountPrice: 20 },
@@ -17,6 +20,7 @@ const PRODUCTS = [
   { id: 9, name: "Speakers", price: 700, discountPrice: 80 },
 
 ];
+
 
 
 
@@ -34,6 +38,7 @@ function calcItemTax(discountPrice) {
 return discountPrice * TAX_RATE;
 
 }
+
 
 
 
@@ -64,7 +69,9 @@ return Object.entries(cart)
 .map(([idStr, qty]) => {
 
 
+
 const id = Number(idStr);
+
 const p = PRODUCTS.find((x) => x.id === id);
 
 
@@ -222,7 +229,7 @@ return;
 
 
 
-
+//  Order confirmation
 window.alert(`Order Confirmed! 
 
 Total: ${money(total)}`);
@@ -245,6 +252,7 @@ return (
 
 
 
+// Brand name
 <div className="page">
 
 
@@ -256,7 +264,6 @@ return (
 
 
 <div className="topbar-actions">
-
 
 
 
@@ -277,9 +284,13 @@ activeTab === "products" ? "is-active" : ""
 
 onClick={() => setActiveTab("products")}
 
-type="button">
-            
+type="button"
+
+>
+
+
 Products
+
 
 </button>
 
